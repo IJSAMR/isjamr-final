@@ -9,10 +9,10 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECRET_KEY='django-insecure-4q%r&2u7tbu*m@fk6-kw^ap%3*^!bgz37^1dt+h8smcqh=pxq('
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY ='django-insecure-4q%r&2u7tbu*m@fk6-kw^ap%3*^!bgz37^1dt+h8smcqh=pxq('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG','False')== 'True'
+DEBUG = 'True'
 print("debug",DEBUG)
 
 # ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS','*').split(',')
@@ -160,16 +160,17 @@ DJOSER = {
 }
 
 # Email configuration
-EMAIL_BACKEND = os.getenv('EMAIL_BACKEND', 'django.core.mail.backends.smtp.EmailBackend')
-EMAIL_HOST = os.getenv('EMAIL_HOST', 'smtp.gmail.com')
-EMAIL_PORT = int(os.getenv('EMAIL_PORT', 587))
-EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', 'your-email@gmail.com')
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', 'your-email-password')
-EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', 'True') == 'True'
+# Email configuration
+EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST="smtp.gmail.com"
+EMAIL_PORT=587
+EMAIL_HOST_USER="editorisjamr@gmail.com"
+EMAIL_HOST_PASSWORD="csmf xcwd zgii ajsa"
+EMAIL_USE_TLS=True
 
 # Domain and site name
-DOMAIN = os.getenv('DOMAIN', 'localhost:8000')
-SITE_NAME = os.getenv('SITE_NAME', 'My Site')
+DOMAIN="www.sjamr.org"
+SITE_NAME="ISJAMR"
 
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWS_CREDENTIALS = True
